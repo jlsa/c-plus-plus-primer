@@ -4,19 +4,26 @@ int main()
 {
 
 	// ------------------------------------------------------------------------
-	// Excersise 1.10:
-	// In addition to the ++ operator that adds 1 to its operand, there is a
-	// decrement operator (--) that subtracts 1. Use the decrement operator to
-	// write a while that prints the numbers from ten down to zero.
+	// Excersise 1.11:
+	// Write a program that prompts the user for two integers. Print each
+	// number in the range specified by those two integers.
 	// ------------------------------------------------------------------------
 
-	int sum = 0, val = 10;
-	// keep executing the while as long as val is greater than or equal to 0
-	while (val >= 0) {
-		sum += val;		// assigns sum + val to sum
-		--val;			// subtracts 1 from val
+	int sum = 0;
+	int num1 = 0, num2 = 0;
+	
+
+	std::cout << "Give two numbers for range calculation." << std::endl;
+	std::cin >> num1 >> num2;
+	num1 += 1;
+	// keep executing the while as long as val is greater than or equal to the 
+	// second number
+	while (num1 <= num2) {
+		sum += num1;		// assigns sum + num1 to sum
+		++num1;				// add 1 to num1
 	}
-	std::cout << "Sum of 0 to 10 inclusive is " << sum << std::endl;
+	std::cout << "Sum of " << num1-1-num2 << " to " << num2 << " inclusive is " 
+		<< sum << std::endl;
 	
 	return 0;
 }
